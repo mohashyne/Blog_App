@@ -1,3 +1,4 @@
+
 # PostgreSQL. Versions 9.3 and up are supported.
 #
 # Install the pg driver:
@@ -23,7 +24,12 @@ default: &default
 
 development:
   <<: *default
-  database: Blog_App_development
+development:
+  <<: *default
+  database: <%= ENV["DEVELOPMENT_DATABASE_NAME"] %>
+  host: <%= ENV["DEVELOPMENT_DATABASE_HOST"] %>
+  username: <%= ENV["DEVELOPMENT_DATABASE_USERNAME"] %>
+  password: <%= ENV["DEVELOPMENT_DATABASE_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
