@@ -1,64 +1,91 @@
-# 📗 Table of Contents
+# Blog_App
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+## 📗 Table of Contents
 
-# 📖 Blog_App <a name="about-project"></a>
+- [Blog\_App](#blog_app)
+  - [📗 Table of Contents](#-table-of-contents)
+  - [📖 Blog\_App ](#-blog_app-)
+  - [🛠 Tech-stack ](#-tech-stack-)
+  - [🛠 Built With ](#-built-with-)
+  - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Setup ](#setup-)
+    - [Prerequisites ](#prerequisites-)
+  - [Usage ](#usage-)
+  - [👥 Authors ](#-authors-)
+  - [❓ FAQ ](#-faq-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show Your Support ](#️-show-your-support-)
+  - [📜 License ](#-license-)
 
-"This Ruby-based Blog Application allows users to create, edit, and manage their own blogs with ease. Packed with user-friendly features and a clean interface, it provides a seamless writing and reading experience"
+## 📖 Blog_App <a name="about-project"></a>
+
+The Blog app is a classic blog website. This application, is a fully functional website that displays a list of posts and allows readers to interact with them by adding comments and liking posts.
+
+## 🛠 Tech-stack <a name="tech-stack"></a>
+
+This project is implemented using the Ruby on Rails programming language, known for its elegant syntax and flexibility. RoR provides a suitable foundation for this Blog_App code decoding project due to its ease of use and string manipulation capabilities.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+This project is built using Ruby on Rails, a dynamic, open-source programming language known for its simplicity and productivity. Ruby's elegant syntax and powerful features make it a popular choice among developers.
 
-
-<details>
-<summary>Ruby</summary>
-  <ul>
-    <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
-  </ul>
-</details>
-
-
-### Key Features <a name="key-features"></a>
-
-
-- **Modularity**
-- **Ruby syntax**
-- **Use of classes**
-- **Functional Querying**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+## Key Features <a name="key-features"></a>
+- [x] **Rails new (setup)**
+- [x] **Data Model**
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+To get started with the Catalog of My Things app, follow the instructions below:
+
+### Setup <a name="setup"></a>
+
+1. Clone the project repository:
+   bash
+   `git clone https://github.com/mohashyne/Blog_App.git`
+   
+
+2. Navigate to the project folder:
+   bash
+   `cd Blog_App`
+
+   
+
+### Prerequisites <a name="prerequisites"></a>
+
+To run the Catalog of My Things app, you'll need the following prerequisites:
+
+- An integrated development environment (IDE) like Visual Studio Code.
+- Ruby installed on your machine.
+- Git installed on your machine.
+- A GitHub account for version control.
+
+## Usage <a name="usage"></a>
+
+Follow these steps to use the program:
+
+1. Open your terminal.
+2. Navigate to the directory where the program files are located using the `cd` command:
+
+   bash
+   `cd /path/to/your/program/files`
+   
+
+3. Start your Ruby on Rails server
+
+   bash
+   `rails s`
 
 
-Clone this repository to your desired folder:
+4. cess the Blog app in your web browser at `http://localhost:3000`.
 
-```sh
-  cd my-folder
-  git https://github.com/mohashyne/Blog_App.git
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+5. You can now interact with the app, create posts, add comments, and explore its features.
 
 
 ## 👥 Authors <a name="authors"></a>
+
+This project was developed by:
 
 👤 **Muhammad Aminu Salihu**
 
@@ -66,52 +93,25 @@ Clone this repository to your desired folder:
 - Twitter: [@muhammadslyhu](https://twitter.com/muhammadsalyhu)
 - LinkedIn: [muhammad-salihu](https://linkedin.com/in/msalyhu)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## ❓ FAQ <a name="faq"></a>
 
+*Q: Is there a plan to add more features to this application?*
+A: Yes, the author has plans to enhance this application's capabilities. One upcoming feature is to make the application executable via tactil, providing more convenience and accessibility to users.
+ 
 
-## 🔭 Future Features <a name="future-features"></a>
-
-
-- [x] **User UI**
-- [x] **Book Class**  ✅
-- [X] **Author Class**   ✅
-- [X] **CLI Interface**    ✅
-- [X] **Add Book Feature**         ✅
-- [ ] **Database Connection**     
-- [ ] **Seed Data**      
-- [ ] **CRUD Operations on Database**       
-- [ ] **Search Functionality for Books**        
-- [ ] **Update Book Feature**          
-
+*Q: Where can I find more information about the Ruby programming language?*
+A: For more information about Ruby, its features, and its community, visit the official [Ruby website](https://www.ruby-lang.org/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/mohashyne/Blog_App/issues) and contribute to the project.
 
-Feel free to check the [issues page](https://github.com/mohashyne/Blog_App/issues).
+## ⭐️ Show Your Support <a name="support"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+If you find this project helpful, consider giving it a ⭐️ to show your support!
 
+## 📜 License <a name="license"></a>
 
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project let me know with a STAR!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-We would like to thaks Microverse for giving me the oportunity to build and contribute in projects like this.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](MIT.md) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This project is licensed under the MIT License - you can click here to have more details [MIT](LICENSE).
