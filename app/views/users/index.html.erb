@@ -1,9 +1,17 @@
 <!-- User contents listed here -->
 <div class="user-list">
   <ul>
-    <li>Usuario 1</li>
-    <li>Usuario 2</li>
-    <li>Usuario 3</li>
+ <% @users.each do |user| %>
+<li>
+ <% if user.photo.present? %>
+  <div><img src="<%= user.photo %>" alt="user-image"></div>
+<% else %>
+  <div><img src="https://unsplash.com/photos/29pFbI_D1Sc" alt="default-image"></div>
+<% end %>
+<strong><%= user.name %></strong>
+<p><%= user.bio%> </p>
+<% end %>
    
   </ul>
 </div>
+
