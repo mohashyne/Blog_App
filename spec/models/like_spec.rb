@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-
   let(:user) { User.create(username: 'john_doe', email: 'john@example.com', password: 'password123') }
-  let(:post) { Post.create(title: 'Sample Post', body: 'This is a sample post', user:) }
+  let(:post) { Post.create(title: 'Sample Post', body: 'This is a sample post', author: user) }
 
   it 'updates likes_counter after saving a like' do
     like = Like.new(user:, post:)
@@ -13,9 +12,7 @@ RSpec.describe Like, type: :model do
     post.reload
 
     expect(post.likes_counter).to eq(1)
-
-  let(:user) { create(:user) }
-  let(:post) { create(:post, author: user) }
+  end
 
   describe 'Associations' do
     it { should belong_to(:user) }
@@ -24,13 +21,10 @@ RSpec.describe Like, type: :model do
 
   describe '#update_likes_counter' do
     it 'updates the post\'s likes_counter' do
-      # rubocop:disable Style/HashSyntax
-      create(:like, post: post, user: user)
-      expect { create(:like, post: post, user: user) }.to change {
-        # rubocop:enable Style/HashSyntax
+      create(:like, post:, user:)
+      expect { create(:like, post:, user:) }.to change {
         post.reload.likes_counter
       }.by(1)
     end
-
   end
 end

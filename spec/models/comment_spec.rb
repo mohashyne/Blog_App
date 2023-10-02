@@ -5,27 +5,17 @@ RSpec.describe Comment, type: :model do
   let(:post) { create(:post, author: user) }
 
   describe 'Associations' do
-
     it { should belong_to(:user) }
-
     it { should belong_to(:author).class_name('User').with_foreign_key('author_id') }
-
     it { should belong_to(:post) }
   end
 
   describe '#update_comments_counter' do
     it 'updates the post\'s comments_counter' do
-      # rubocop:disable Style/HashSyntax
-
-      create(:comment, post: post, user: user)
-      expect { create(:comment, post: post, user: user) }.to change {
-
-      create(:comment, post: post, author: user)
-      expect { create(:comment, post: post, author: user) }.to change {
-
+      create(:comment, post:, user:)
+      expect { create(:comment, post:, user:) }.to change {
         post.reload.comments_counter
       }.by(1)
-      # rubocop:enable Style/HashSyntax
     end
   end
 end
