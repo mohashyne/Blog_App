@@ -1,17 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:user) { User.create(username: "john_doe", email: "john@example.com", password: "password123") }
-  let(:post) { Post.create(title: "Sample Post", body: "This is a sample post", user: user) }
+  let(:user) { create(:user) }
+  let(:post) { create(:post, author: user) }
 
-  it "updates comments_counter after saving a comment" do
-    comment = Comment.new(user: user, post: post)
-    comment.save
+  describe 'Associations' do
+    it { should belong_to(:user) }
+    it { should belong_to(:post) }
+  end
 
-    # Reload post to get the latest comments_counter value
-    post.reload
-
-    expect(post.comments_counter).to eq(1)
+  describe '#update_comments_counter' do
+    it 'updates the post\'s comments_counter' do
+      # rubocop:disable Style/HashSyntax
+      create(:comment, post: post, user: user)
+      expect { create(:comment, post: post, user: user) }.to change {
+        post.reload.comments_counter
+      }.by(1)
+      # rubocop:enable Style/HashSyntax
+    end
   end
 end
-
