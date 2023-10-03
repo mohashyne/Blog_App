@@ -16,8 +16,6 @@ RSpec.describe 'Users', type: :request do
       get users_path
       expect(response.body).to include('All Users')
     end
-
-   
   end
 
   describe 'GET /users/:id' do
@@ -38,7 +36,5 @@ RSpec.describe 'Users', type: :request do
       get user_path(user)
       expect(response.body).to include('User Information')
     end
-
-  
   end
 end
