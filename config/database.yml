@@ -27,11 +27,16 @@ development:
   <<: *default
 development:
   <<: *default
-  database: <%= ENV["DEVELOPMENT_DATABASE_NAME"] %>
-  host: <%= ENV["DEVELOPMENT_DATABASE_HOST"] %>
-  username: <%= ENV["DEVELOPMENT_DATABASE_USERNAME"] %>
-  password: <%= ENV["DEVELOPMENT_DATABASE_PASSWORD"] %>
-  port:  <%= ENV["DEVELOPMENT_DATABASE_PORT"] %>
+  # database: <%= ENV["DEVELOPMENT_DATABASE_NAME"] %>
+  # host: <%= ENV["DEVELOPMENT_DATABASE_HOST"] %>
+  # username: <%= ENV["DEVELOPMENT_DATABASE_USERNAME"] %>
+  # password: <%= ENV["DEVELOPMENT_DATABASE_PASSWORD"] %>
+  # port:  <%= ENV["DEVELOPMENT_DATABASE_PORT"] %>
+  database: postgres
+  host: localhost
+  username: postgres
+  password: Pas4all@1
+  port:  5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,11 +70,17 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%= ENV["TEST_DATABASE_NAME"] %>
-  host: <%= ENV["TEST_DATABASE_HOST"] %>
-  username: <%= ENV["TEST_DATABASE_USERNAME"] %>
-  password: <%= ENV["TEST_DATABASE_PASSWORD"] %>
-  port:  <%= ENV["TEST_DATABASE_PORT"] %>
+  # database: <%= ENV["TEST_DATABASE_NAME"] %>
+  # host: <%= ENV["TEST_DATABASE_HOST"] %>
+  # username: <%= ENV["TEST_DATABASE_USERNAME"] %>
+  # password: <%= ENV["TEST_DATABASE_PASSWORD"] %>
+  # port:  <%= ENV["TEST_DATABASE_PORT"] %>
+  database: postgres
+  host: localhost
+  username: postgres
+  password: Pas4all@1
+  port:  5432
+
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -93,6 +104,11 @@ test:
 #
 production:
   <<: *default
-  database: Blog_App_production
-  username: Blog_App
-  password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
+  # database: Blog_App_production
+  # username: Blog_App
+  # password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
+  database: postgres
+  host: localhost
+  username: postgres
+  password: Pas4all@1
+  port:  5432
