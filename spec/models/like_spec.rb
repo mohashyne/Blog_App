@@ -6,7 +6,7 @@ RSpec.describe Like, type: :model do
   let(:post) { create(:post, author: user) }
 
   it 'updates likes_counter after saving a like' do
-    like = Like.new(user: user, post: post) # Use actual instances, not symbols
+    like = Like.new(user:, post:) # Use actual instances, not symbols
     like.save
 
     # Reload post to get the latest likes_counter value
@@ -22,8 +22,8 @@ RSpec.describe Like, type: :model do
 
   describe '#update_likes_counter' do
     it 'updates the post\'s likes_counter' do
-      create(:like, post: post, user: user) # Use actual instances, not symbols
-      expect { create(:like, post: post, user: user) }.to change {
+      create(:like, post:, user:) # Use actual instances, not symbols
+      expect { create(:like, post:, user:) }.to change {
         post.reload.likes_counter
       }.by(1)
     end

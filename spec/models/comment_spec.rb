@@ -18,7 +18,7 @@ RSpec.describe Comment, type: :model do
 
   describe '#update_comments_counter' do
     it 'updates the post\'s comments_counter' do
-      comment = create(:comment, post: post, author: user)
+      create(:comment, post:, author: user)
       post.reload
 
       expect(post.comments_counter).to eq(1)
