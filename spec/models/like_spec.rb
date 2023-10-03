@@ -1,11 +1,12 @@
+# spec/models/like_spec.rb
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  let(:user) { User.create(username: 'john_doe', email: 'john@example.com', password: 'password123') }
-  let(:post) { Post.create(title: 'Sample Post', body: 'This is a sample post', author: user) }
+  let(:user) { create(:user) }
+  let(:post) { create(:post, author: user) }
 
   it 'updates likes_counter after saving a like' do
-    like = Like.new(user:, post:)
+    like = Like.new(user:, post:) # Use actual instances, not symbols
     like.save
 
     # Reload post to get the latest likes_counter value
@@ -21,7 +22,7 @@ RSpec.describe Like, type: :model do
 
   describe '#update_likes_counter' do
     it 'updates the post\'s likes_counter' do
-      create(:like, post:, user:)
+      create(:like, post:, user:) # Use actual instances, not symbols
       expect { create(:like, post:, user:) }.to change {
         post.reload.likes_counter
       }.by(1)

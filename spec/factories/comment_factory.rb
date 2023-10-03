@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    text { 'This is a sample comment' }
+    body { 'Sample comment body' }
+    association :author, factory: :user # Assuming :user is the name of your user factory
     association :post
-    association :author, factory: :user
   end
 end
