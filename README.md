@@ -13,6 +13,7 @@
     - [Prerequisites ](#prerequisites-)
   - [Usage ](#usage-)
   - [👥 Authors ](#-authors-)
+  - [Future Features ](#future-features-)
   - [❓ FAQ ](#-faq-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show Your Support ](#️-show-your-support-)
@@ -92,6 +93,16 @@ This project was developed by:
 - GitHub: [@mohashyne](https://github.com/mohashyne)
 - Twitter: [@muhammadslyhu](https://twitter.com/muhammadsalyhu)
 - LinkedIn: [muhammad-salihu](https://linkedin.com/in/msalyhu)
+
+## Future Features <a name="future-project"></a>
+
+- [ ] **Views**
+- [ ] **Forms**
+- [ ] **Integration specs for Views**
+- [ ] **Devise**
+- [ ] **Authorization Rules**
+- [ ] **API endpoints.**
+
 
 ## ❓ FAQ <a name="faq"></a>
 
