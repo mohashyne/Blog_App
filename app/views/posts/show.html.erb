@@ -1,1 +1,25 @@
-<h1>Total Comments</h1>
+<div>
+  <div class="user-card left">
+    <h3><%= @post.title %> by <%= @user.name %></h3>
+    <div class="right">
+        <span class="span-post">Comments: <%= @post.comments.count %></span>
+        <span class="span-post">Likes: <%= @post.likes.count %></span>
+      </div>
+      <br>
+    <p><%= @post.text %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illo eligendi nisi quas earum officia necessitatibus ipsa ut aspernatur assumenda culpa aliquam veritatis recusandae nobis perferendis, excepturi porro hic a odit voluptate aperiam, totam nostrum. Cumque, pariatur, omnis facilis ratione nisi eum ab quidem, fugiat delectus beatae maiores dolorum similique!</p>
+  </div>
+
+
+<div class="comments-container">
+  <% @comments.each do |comment| %>
+  <%= "Comments" %>
+    <div class="comment">
+      <span class="comment-author"><%= comment.author.name %>:</span>
+      <span class="comment-text"><%= comment.text %></span>
+    </div>
+<% end %>
+</div>
+
+
+  <div class="user-card left">
+    <ul>
