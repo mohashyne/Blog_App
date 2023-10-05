@@ -22,6 +22,6 @@ class PostsController < ApplicationController
     # Rest of the logic to show the information of the post on the view
 
     @comments = @post.comments
-    @current_like = @post.likes.find_by(author_id: current_user.id)
+    @current_like = @post.likes.find_by(user_id: current_user.id)
   end
 end
