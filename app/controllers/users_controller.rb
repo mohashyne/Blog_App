@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def show
     # Found the user with the same ID of the parameter 'id' on the URL
     @user = User.find(params[:id])
-
-    # Rest of the logic to show the user information on the view
+    @post = @user.posts.order(created_at: :desc).first
   end
 end

@@ -23,4 +23,18 @@ class PostsController < ApplicationController
 
     @comments = @post.comments
   end
+
+  def new
+    @post = @user.posts.build
+  end
+
+  private
+
+  def find_user
+    @user = User.find(params[:user_id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :content)
+  end
 end
