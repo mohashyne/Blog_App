@@ -36,5 +36,6 @@
       </li>
     <% end %>
   </ul>
+  <%= link_to 'Create a new post', new_user_post_path(@user), class: 'see-all-posts-btn' %>
 </div>
 <%= paginate @posts, param_name: 'page', class: 'button' %>

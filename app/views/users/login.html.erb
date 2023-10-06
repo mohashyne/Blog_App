@@ -1,8 +1,16 @@
+<h1 class="index-title">All Users</h1>
+
+<%= form_with(model: @user) do |form| %>
+  <%= form.text_field :username %>
+  <%= form.password_field :password %>
+  <%= form.submit "Register" %>
+<% end %>
+
 <ul class="user-list">
   <% @users.each do |user| %>
     <li class="user-card flex">
       <div class="user-image border">
-        <img src="<%= user.photo %>" alt="<%= user.name %>'s photo" width="100% heigth="100%">
+        <img src="<%= user.photo %>" alt="<%= user.name %>'s photo" width="100%" height="100%">
       </div>
       <div class="user-info border">
         <h2><%= link_to user.name, user_path(user) %></h2>
