@@ -32,7 +32,7 @@ development:
   # username: <%= ENV["DEVELOPMENT_DATABASE_USERNAME"] %>
   # password: <%= ENV["DEVELOPMENT_DATABASE_PASSWORD"] %>
   # port:  <%= ENV["DEVELOPMENT_DATABASE_PORT"] %>
-  database: postgres
+  database: Blog_App
   host: localhost
   username: postgres
   password: Pas4all@1
@@ -75,7 +75,7 @@ test:
   # username: <%= ENV["TEST_DATABASE_USERNAME"] %>
   # password: <%= ENV["TEST_DATABASE_PASSWORD"] %>
   # port:  <%= ENV["TEST_DATABASE_PORT"] %>
-  database: postgres
+  database: Blog_App
   host: localhost
   username: postgres
   password: Pas4all@1
@@ -107,7 +107,7 @@ production:
   # database: Blog_App_production
   # username: Blog_App
   # password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
-  database: postgres
+  database: Blog_App
   host: localhost
   username: postgres
   password: Pas4all@1
