@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_29_214543) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_07_133054) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "adminpack"
   enable_extension "pgagent"
@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_214543) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_id"
+    t.integer "author_id"
+    t.integer "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_214543) do
     t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "content"
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
