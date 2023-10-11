@@ -1,7 +1,4 @@
 class ApplicationController < ActionController::Base
-  def current_user
-    @current_user ||= User.first
-  end
+  before_action :authenticate_user!, except: [:index, :show]
 
-  helper_method :current_user
 end
