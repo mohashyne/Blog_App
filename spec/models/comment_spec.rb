@@ -5,23 +5,15 @@ RSpec.describe Comment, type: :model do
   let(:post) { create(:post, author: user) }
 
   describe 'Associations' do
-    it 'belongs to a user (author)' do
-      association = described_class.reflect_on_association(:author)
-      expect(association.macro).to eq :belongs_to
-    end
-
-    it 'belongs to a post' do
-      association = described_class.reflect_on_association(:post)
-      expect(association.macro).to eq :belongs_to
-    end
+    it { should belong_to(:author).class_name('User').with_foreign_key('author_id') }
+    it { should belong_to(:post) }
   end
 
   describe '#update_comments_counter' do
     it 'updates the post\'s comments_counter' do
       create(:comment, post:, author: user)
-      post.reload
 
-      expect(post.comments_counter).to eq(1)
+      expect { create(:comment, post:, author: user) }.to change { post.reload.comments_counter }.by(1)
     end
   end
 end

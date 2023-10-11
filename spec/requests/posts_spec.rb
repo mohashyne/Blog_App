@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  # Create a user for testing purposes
+  # Crear un usuario para las pruebas
   let(:user) { FactoryBot.create(:user) }
 
   describe 'GET /user/:user_id/posts' do

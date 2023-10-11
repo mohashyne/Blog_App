@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   let(:user) { create(:user) }
 
   describe 'Associations' do
-    it { should belong_to(:author).class_name('User').with_foreign_key(:author_id) }
+    it { should belong_to(:author).class_name('User').with_foreign_key('author_id') }
     it { should have_many(:comments) }
     it { should have_many(:likes) }
   end
@@ -21,6 +21,7 @@ RSpec.describe Post, type: :model do
       post = create(:post, author: user)
       create_list(:comment, 5, post:, created_at: 1.month.ago)
       recent_comments = create_list(:comment, 5, post:)
+
       expected_comment_ids = recent_comments.pluck(:id).sort.reverse
       actual_comment_ids = post.five_most_recent_comments.pluck(:id).sort.reverse
 

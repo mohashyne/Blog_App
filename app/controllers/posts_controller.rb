@@ -1,15 +1,12 @@
-# app/controllers/posts_controller.rb
-
 class PostsController < ApplicationController
   before_action :find_user
 
   def index
-    @posts = @user.posts.page(params[:page]).per(3)
+    @posts = @user.posts.includes(:comments, :likes).page(params[:page]).per(3)
   end
 
   def create
-    @post = current_user.posts.build(post_params) # Use current_user here
-
+    @post = @user.posts.build(post_params)
     if @post.save
       redirect_to user_post_path(@user, @post), notice: 'Post was successfully created.'
     else
