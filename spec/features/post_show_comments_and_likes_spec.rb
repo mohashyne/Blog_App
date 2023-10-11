@@ -2,8 +2,8 @@ require 'rails_helper'
 RSpec.feature 'PostShowCommentsAndLikes', type: :feature do
   let(:user) { create(:user) }
   let(:post) { create(:post, author: user) }
-  let(:comments) { create_list(:comment, 3, post: post) }
-  let(:likes) { create_list(:like, 3, post: post) }
+  let(:comments) { create_list(:comment, 3, post:) }
+  let(:likes) { create_list(:like, 3, post:) }
   before do
     comments
     likes
