@@ -99,7 +99,6 @@ This project was developed by:
 - GitHub: [@kidd254](https://github.com/Kidd254)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lawrence-muema-kioko)
 
-
 ## Future Features <a name="future-project"></a>
 
 - [ ] **Views**
