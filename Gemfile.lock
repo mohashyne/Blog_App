@@ -103,6 +103,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -137,6 +141,10 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     language_server-protocol (3.17.0.3)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -311,15 +319,17 @@ DEPENDENCIES
   database_cleaner
   debug
   devise
+  dotenv-rails
   factory_bot_rails
   importmap-rails
   jbuilder
   kaminari
+  letter_opener
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
   rails-controller-testing
-  rspec-rails (~> 5.0.0)
+  rspec-rails (~> 5.0)
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   shoulda-matchers (~> 4.0)

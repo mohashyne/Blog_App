@@ -5,7 +5,7 @@ RSpec.feature 'PostIndexLikes', type: :feature do
 
   let!(:posts) do
     create_list(:post, 5, author: user).each do |post|
-      create_list(:like, 2, post:, user:)
+      create_list(:like, 2, post: post, user: user)
     end
   end
 

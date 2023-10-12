@@ -9,7 +9,7 @@ RSpec.describe 'PostIndexCommentsAndNavigation', type: :feature do
 
   let!(:posts) do
     create_list(:post, 5, author: user).each do |post|
-      create_list(:comment, 3, post:, author: user)
+      create_list(:comment, 3, post: post, author: user)
     end
   end
 

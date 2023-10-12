@@ -12,11 +12,9 @@
   </head>
 
   <body class="container center">
-   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-       <%= render 'layouts/navbar'%>
     <%= yield %>
     <script>
+    // Código para eliminar cookies al cerrar la página
     window.addEventListener('unload', function() {
       document.cookie.split(";").forEach(function(c) {
         document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
