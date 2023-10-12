@@ -2,13 +2,13 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    # Administrator
+    # Administrador
     if user.admin?
       puts 'soy admin'
       can :manage, Post
       can :manage, Comment
     else
-      # User
+      # Usuario
       puts 'soy user'
       can :read, :all
       can :create, Post, author_id: user.id

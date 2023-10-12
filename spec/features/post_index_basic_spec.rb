@@ -4,7 +4,7 @@ RSpec.feature 'UserPostsIndexPart1', type: :feature do
   let!(:user) { create(:user) }
   let!(:posts) { create_list(:post, 5, author: user) }
   let!(:comments) { create_list(:comment, 3, post: posts.first, author: user) }
-  let!(:likes) { create_list(:like, 3, post: posts.first, user:) }
+  let!(:likes) { create_list(:like, 3, post: posts.first, user: user) }
 
   before do
     visit user_posts_path(user)
