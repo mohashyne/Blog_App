@@ -17,6 +17,7 @@
   - [❓ FAQ ](#-faq-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show Your Support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📜 License ](#-license-)
 
 ## 📖 Blog_App <a name="about-project"></a>
@@ -127,6 +128,15 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## ⭐️ Show Your Support <a name="support"></a>
 
 If you find this project helpful, consider giving it a ⭐️ to show your support!
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I thank Microverse for this fantastic opportunity, and all partners and mentors
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 ## 📜 License <a name="license"></a>
 

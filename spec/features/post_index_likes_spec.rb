@@ -4,8 +4,10 @@ RSpec.feature 'PostIndexLikes', type: :feature do
   let!(:user) { create(:user, id: 1) }
 
   let!(:posts) do
+    # rubocop:disable Style/HashSyntax
     create_list(:post, 5, author: user).each do |post|
-      create_list(:like, 2, post:, user:)
+      create_list(:like, 2, post: post, user: user)
+      # rubocop:enable Style/HashSyntax
     end
   end
 
