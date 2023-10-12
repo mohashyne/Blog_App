@@ -4,8 +4,10 @@ RSpec.feature 'PostIndexComments', type: :feature do
   let!(:user) { create(:user, id: 1) }
 
   let!(:posts) do
+    # rubocop:disable Style/HashSyntax
     create_list(:post, 5, author: user).each do |post|
       create_list(:comment, 3, post: post, author: user)
+      # rubocop:enable Style/HashSyntax
     end
   end
 
