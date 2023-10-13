@@ -98,6 +98,7 @@ This project was developed by:
 👤 **Lawrence Muema Kioko**
 
 - GitHub: [@kidd254](https://github.com/Kidd254)
+- Twitter: [@lawrence Kioko](https://twitter.com/lawrenc98789206)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lawrence-muema-kioko)
 
 ## Future Features <a name="future-project"></a>
