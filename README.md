@@ -36,6 +36,11 @@ This project is built using Ruby on Rails, a dynamic, open-source programming la
 ## Key Features <a name="key-features"></a>
 - [x] **Rails new (setup)**
 - [x] **Data Model**
+- [x] **MVC architectural/design pattern**
+- [x] **RESTful API**
+- [x] **Authorization rules using CanCanCan gem**
+- [x] **Authentication system build with devise gem**
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -98,6 +103,7 @@ This project was developed by:
 👤 **Lawrence Muema Kioko**
 
 - GitHub: [@kidd254](https://github.com/Kidd254)
+- Twitter: [@lawrence Kioko](https://twitter.com/lawrenc98789206)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lawrence-muema-kioko)
 
 ## Future Features <a name="future-project"></a>
